@@ -1,6 +1,6 @@
 const express = require('express'); 
 const app = express();
-const port = 8000 || process.env.PORT;
+const port = process.env.PORT || 8000;
 // const db = new sqlite3(path.resolve('messages.db'), {fileMustExist: true});
 const db = require("./db/messages");
 const bodyParser = require('body-parser');
