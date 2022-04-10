@@ -27,7 +27,7 @@ app.get('/message', async (req, res) => {
     }
     if (req.body.key == key){
         messages = await db.getAllMessages();
-        res.status(200).json({ messages });
+        res.status(200).send({ messages });
     } else {
         res.status(404).send({ message: 'invalid key' });
     }
@@ -61,7 +61,7 @@ app.post('/message', async (req, res) =>{
     // const result = db.run('INSERT INTO Message (email, name, message) VALUES (@email, @name, @message)', {email, name, msg});
     const results = await db.createMessage(req.body)
 
-    res.status(201).json({
+    res.status(201).send({
         id: results[0]
     })
 })
