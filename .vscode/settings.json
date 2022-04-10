@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/82493c35-139a-4a84-bdc4-e4c868d2272d/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/markdeguzmanServerApplication",
-    "appService.deploySubpath": "."
-}
