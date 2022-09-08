@@ -1,11 +1,11 @@
 const knex = require("./knex");
 
 function createMessage(message) {
-    return knex("message").insert(message);
+    return knex("Message").insert(message);
 };
 
 function getAllMessages() {
-    return knex("message").select("*");
+    return knex("Message").select("*");
 };
 
 module.exports = {

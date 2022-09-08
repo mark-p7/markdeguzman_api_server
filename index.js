@@ -2,18 +2,12 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
 // const db = new sqlite3(path.resolve('messages.db'), {fileMustExist: true});
-const db = require("./db/messages");
+const db = require(`${__dirname}/database/messages`);
 const bodyParser = require('body-parser');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-app.get('/tshirt', (req, res) => {
-    res.status(200).send({
-        message: 'OK'
-    })
-})
 
 const key = '1236hjgfg79r67uDThw46nwq34vbt35ybn4w65w4vytw48uw';
 // {
